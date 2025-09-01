@@ -2,6 +2,20 @@
 {% block title %}Contact Us | Zuharyan Oil & Gas{% endblock %}
 {% block content %}
     <h2>Contact Us</h2>
-    <p>Email: info@zuharyanoilandgas.com</p>
-    <p>Phone: +1 (555) 123-4567</p>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div style="margin-top:2em;">
+        <p>Email: info@zuharyanoilandgas.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+    </div>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
 {% endblock %}

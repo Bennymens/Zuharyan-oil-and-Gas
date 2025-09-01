@@ -12,4 +12,7 @@ def careers(request):
 def contact(request):
 	return render(request, 'main/contact.html')
 
+def services(request):
+    return render(request, 'main/services.html')
+
 # Create your views here.

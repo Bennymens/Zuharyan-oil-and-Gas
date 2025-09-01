@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% block title %}Services | Zuharyan Oil & Gas{% endblock %}
+{% block content %}
+<section class="container">
+    <h2>Our Services</h2>
+    <div class="services-grid" style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+        <div class="card" style="width: 18rem; overflow: hidden;">
+            <img src="/static/img/3d-rendering-gas-cylinder.jpg" class="card-img-top" alt="Gas Cylinder" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+                <h3 class="card-title">Gas Cylinder Production</h3>
+                <p class="card-text">High-quality gas cylinder manufacturing with advanced safety standards.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; overflow: hidden;">
+            <img src="/static/img/pollution-industry-exterior-daylight.jpg" class="card-img-top" alt="Industrial Pollution Control" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+                <h3 class="card-title">Industrial Pollution Control</h3>
+                <p class="card-text">Innovative solutions to minimize environmental impact in industrial operations.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; overflow: hidden;">
+            <img src="/static/img/worker-oil-rig-sunset-created-with-generative-ai-technology.jpg" class="card-img-top" alt="Oil Rig Operations" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+                <h3 class="card-title">Oil Rig Operations</h3>
+                <p class="card-text">Efficient and safe oil rig operations powered by cutting-edge technology.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
