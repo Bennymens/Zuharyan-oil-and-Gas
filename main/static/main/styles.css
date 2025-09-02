@@ -67,7 +67,7 @@ nav ul li a {
 	padding: 5px 8px;
 	border-radius: 3px;
 	transition: background 0.3s ease;
-	text-decoration: none; /* Prevent underline on nav links */
+	text-decoration: none; 
 }
 nav ul li a:hover { background: #0056b3; }
 .hero {

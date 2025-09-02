@@ -1,21 +1,33 @@
 {% extends 'main/base.html' %}
-{% block title %}Contact Us | Zuharyan Oil & Gas{% endblock %}
+{% block title %}Contact Us | Zuhayrān Oil & Gas{% endblock %}
 {% block content %}
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    <div style="margin-top:2em;">
-        <p>Email: info@zuharyanoilandgas.com</p>
-        <p>Phone: +1 (555) 123-4567</p>
+<div class="container py-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            <form method="post" class="p-4 shadow rounded bg-white">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+            
+        </div>
     </div>
-    <ul>
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'services' %}">Services</a></li>
-        <li><a href="{% url 'contact' %}">Contact</a></li>
-    </ul>
+</div>
 {% endblock %}

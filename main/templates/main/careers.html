@@ -1,13 +1,172 @@
 {% extends 'main/base.html' %}
-{% block title %}Careers | Zuharyan Oil & Gas{% endblock %}
+{% block title %}Careers | Zuhayrān Oil & Gas{% endblock %}
 {% block content %}
-    <h2>Join Our Team</h2>
-    <p>We are always looking for talented individuals to join our growing team. Check back soon for open positions.</p>
-    <ul style="margin-top:2em; text-align:left; max-width:600px; margin-left:auto; margin-right:auto;">
-        <li>Competitive compensation and benefits</li>
-        <li>Opportunities for growth and advancement</li>
-        <li>Inclusive and innovative work environment</li>
-        <li>Commitment to safety and sustainability</li>
-    </ul>
-    <p style="margin-top:2em;">To apply, send your resume to <a href="mailto:careers@zuhayran.com">careers@zuhayran.com</a></p>
+<div class="container py-5">
+    <h2 class="text-center mb-3">Join Our Team</h2>
+    <p class="lead text-center mb-4">At Zuhayrān Oil & Gas, we believe our people are our greatest asset. We’re committed to building a diverse, innovative, and supportive workplace where you can thrive and make a real impact in the energy sector.</p>
+    
+    <!-- Benefits Grid -->
+    <div class="row text-center mb-5">
+        <div class="col-6 col-md-3 mb-3">
+            <i class="bi bi-heart-pulse-fill text-danger fs-2"></i>
+            <div>Health Insurance</div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <i class="bi bi-mortarboard-fill text-primary fs-2"></i>
+            <div>Training & Development</div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <i class="bi bi-clock-history text-success fs-2"></i>
+            <div>Flexible Hours</div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <i class="bi bi-globe2 text-warning fs-2"></i>
+            <div>Global Opportunities</div>
+        </div>
+    </div>
+
+    <!-- Why Work With Us Card -->
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title mb-3"><i class="bi bi-people-fill text-primary"></i> Why Work With Us?</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Competitive compensation and benefits</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Opportunities for growth and advancement</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Inclusive and innovative work environment</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i> Commitment to safety and sustainability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Career Growth Timeline -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-10">
+            <h5 class="text-center mb-3"><i class="bi bi-bar-chart-steps text-info"></i> Career Growth at Zuhayrān</h5>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between timeline">
+                <div class="timeline-step text-center mb-4 mb-md-0">
+                    <div class="timeline-icon bg-primary text-white mb-2"><i class="bi bi-person-plus-fill"></i></div>
+                    <div>Apply</div>
+                </div>
+                <div class="timeline-line d-none d-md-block"></div>
+                <div class="timeline-step text-center mb-4 mb-md-0">
+                    <div class="timeline-icon bg-success text-white mb-2"><i class="bi bi-people-fill"></i></div>
+                    <div>Join Team</div>
+                </div>
+                <div class="timeline-line d-none d-md-block"></div>
+                <div class="timeline-step text-center mb-4 mb-md-0">
+                    <div class="timeline-icon bg-warning text-white mb-2"><i class="bi bi-lightbulb-fill"></i></div>
+                    <div>Grow Skills</div>
+                </div>
+                <div class="timeline-line d-none d-md-block"></div>
+                <div class="timeline-step text-center">
+                    <div class="timeline-icon bg-info text-white mb-2"><i class="bi bi-trophy-fill"></i></div>
+                    <div>Advance Career</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diversity & Inclusion Statement -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <div class="alert alert-info shadow-sm text-center">
+                <i class="bi bi-people text-primary fs-4"></i>
+                <strong>We celebrate diversity.</strong> Zuhayrān Oil & Gas is an equal opportunity employer. We welcome applicants from all backgrounds and experiences.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <h5 class="mb-3 text-center"><i class="bi bi-question-circle-fill text-secondary"></i> Careers FAQ</h5>
+            <div class="accordion" id="careersFAQ">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            How do I apply for a job?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#careersFAQ">
+                        <div class="accordion-body">
+                            Email your resume and cover letter to <a href="mailto:careers@zuhayran.com">careers@zuhayran.com</a>. We’ll review your application and contact you if there’s a match.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            What benefits do you offer?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#careersFAQ">
+                        <div class="accordion-body">
+                            We offer health insurance, training, flexible hours, global opportunities, and more.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Can I apply if I have no oil & gas experience?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#careersFAQ">
+                        <div class="accordion-body">
+                            Yes! We value diverse backgrounds and provide training for new team members.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact HR Directly -->
+    <div class="text-center">
+        <p class="mb-2">To apply or send your resume, email us at:</p>
+        <a href="mailto:careers@zuhayran.com" class="btn btn-primary mb-3"><i class="bi bi-envelope-fill me-2"></i>careers@zuhayran.com</a>
+        <p class="mb-0">Or <a href="https://www.linkedin.com/company/zuhayran-oil-gas/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> connect with HR on LinkedIn</a></p>
+    </div>
+</div>
+<style>
+    .timeline {
+        position: relative;
+        margin: 2rem 0 1rem 0;
+    }
+    .timeline-step {
+        flex: 1;
+        min-width: 100px;
+    }
+    .timeline-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 auto 8px auto;
+        font-size: 1.6em;
+        box-shadow: 0 2px 8px rgba(2,138,158,0.07);
+    }
+    .timeline-line {
+        flex: 0 0 40px;
+        height: 4px;
+        background: linear-gradient(90deg, #028A9E 60%, #e0f7fa 100%);
+        border-radius: 2px;
+        margin: 0 8px;
+        align-self: center;
+    }
+    @media (max-width: 767px) {
+        .timeline {
+            flex-direction: column !important;
+        }
+        .timeline-line {
+            display: none !important;
+        }
+    }
+</style>
 {% endblock %}
