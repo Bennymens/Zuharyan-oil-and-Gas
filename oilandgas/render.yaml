@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: zuhayran-oil-and-gas
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn zuhayran.wsgi"
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: zuhayran-oil-and-gas.onrender.com
