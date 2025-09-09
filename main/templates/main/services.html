@@ -3,11 +3,7 @@
 {% block content %}
 <section class="services-page py-5" style="background: linear-gradient(90deg, #f4f4f4 80%, #e0f7fa 100%);">
     <div class="container">
-        <!-- Intro Section -->
-        <div class="text-center mb-5">
-            <h1 class="mb-2">Our Services</h1>
-            <p class="lead">Zuhayrān delivers reliable, innovative, and sustainable energy solutions tailored to your needs.</p>
-        </div>
+        <h1 class="text-center mb-4">Our Services</h1>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 shadow service-card" data-aos="fade-up">
@@ -22,7 +18,6 @@
                             <li>• Custom sizes available</li>
                         </ul>
                         <p class="card-text">High-quality gas cylinder manufacturing for industrial and domestic use.</p>
-                        <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalGas">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -39,7 +34,6 @@
                             <li>• Regulatory compliance</li>
                         </ul>
                         <p class="card-text">Innovative solutions to minimize environmental impact in industrial operations.</p>
-                        <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalPollution">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -56,83 +50,15 @@
                             <li>• Safety & efficiency</li>
                         </ul>
                         <p class="card-text">Efficient and safe oil rig operations powered by advanced technology.</p>
-                        <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalRig">Learn More</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonial Section -->
-        <div class="container mt-5">
-            <div class="testimonial-section text-center py-4" style="background: #e0f7fa; border-radius: 12px;">
-                <blockquote class="blockquote">
-                    <p class="mb-0">"Zuhayrān's team exceeded our expectations in safety and efficiency. Highly recommended!"</p>
-                    <footer class="blockquote-footer">A. Client, <cite title="Source Title">Energy Corp</cite></footer>
-                </blockquote>
-            </div>
-        </div>
-        <!-- CTA Banner -->
         <div class="text-center mt-5">
             <a href="{% url 'contact' %}" class="btn btn-primary btn-lg shadow">Contact Us for a Quote</a>
         </div>
     </div>
 </section>
-
-<!-- Modals for Service Details -->
-<div class="modal fade" id="modalGas" tabindex="-1" aria-labelledby="modalGasLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalGasLabel">Gas Cylinder Production</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>We manufacture high-quality gas cylinders using advanced technology and strict safety protocols. Our cylinders are available in various sizes and are certified for both industrial and domestic use.</p>
-        <ul>
-          <li>ISO-certified production</li>
-          <li>Custom branding available</li>
-          <li>Bulk order discounts</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="modalPollution" tabindex="-1" aria-labelledby="modalPollutionLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalPollutionLabel">Industrial Pollution Control</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Our pollution control solutions help industries meet environmental regulations and reduce emissions. We offer consulting, equipment installation, and ongoing monitoring.</p>
-        <ul>
-          <li>Emission reduction systems</li>
-          <li>Compliance audits</li>
-          <li>Continuous monitoring</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="modalRig" tabindex="-1" aria-labelledby="modalRigLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalRigLabel">Oil Rig Operations</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>We operate and maintain oil rigs with a focus on safety, efficiency, and innovation. Our team is available 24/7 to ensure smooth operations and rapid response to any issues.</p>
-        <ul>
-          <li>Remote monitoring</li>
-          <li>Expert maintenance teams</li>
-          <li>Emergency response</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Optional: AOS Animation Library -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -156,11 +82,6 @@
     .service-card .badge {
         font-size: 0.85em;
         vertical-align: middle;
-    }
-    .testimonial-section {
-        font-size: 1.1em;
-        color: #003366;
-        box-shadow: 0 2px 12px rgba(2,138,158,0.07);
     }
 </style>
 {% endblock %}

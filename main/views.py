@@ -42,7 +42,7 @@ def contact(request):
         messages.success(request, "Your message has been sent! We'll get back to you soon.")
         return redirect('contact')
     return render(request, 'main/contact.html')
-
+   
 def services(request):
     return render(request, 'main/services.html')
 
