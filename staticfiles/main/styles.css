@@ -1,0 +1,332 @@
+/* Gallery Section */
+.gallery {
+	padding: 50px 20px;
+	text-align: center;
+}
+.gallery-grid {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.gallery-grid img {
+	max-width: 300px;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+	transform: scale(1.05);
+}
+a { text-decoration: none; color: #003366; transition: color 0.3s ease; }
+a:hover { color: #0056b3; }
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	color: #333;
+	background-color: #f9f9f9;
+}
+h1, h2, h3 { margin: 0; color: #003366; }
+header {
+	background: #003366;
+	color: #fff;
+	padding: 15px 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.header-top {
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 10px;
+	font-style: italic;
+}
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+.logo {
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 15px;
+	margin: 0;
+	padding: 0;
+}
+nav ul li { display: inline; }
+nav ul li a {
+	color: #fff;
+	font-weight: normal;
+	font-size: 14px;
+	padding: 5px 8px;
+	border-radius: 3px;
+	transition: background 0.3s ease;
+	text-decoration: none; 
+}
+nav ul li a:hover { background: #0056b3; }
+.hero {
+	background: url('../images/field-with-oil-pump-jacks-surrounded-by-greenery-cloudy-sky-sunlight.jpg') no-repeat center center/cover;
+	color: #fff;
+	text-align: center;
+	padding: 260px 20px;
+	position: relative;
+}
+.hero::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+.hero-content {
+	position: relative;
+	z-index: 2;
+}
+.hero-content h1 {
+	font-size: 50px;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.hero-content p {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.cta-button {
+	background: #ff9900;
+	color: #fff;
+	padding: 12px 25px;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+.cta-button:hover {
+	background: #cc7a00;
+}
+.stats {
+	background: #f4f4f4;
+	padding: 50px 20px;
+	text-align: center;
+}
+.stats-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.stat-item h3 {
+	font-size: 40px;
+	color: #003366;
+}
+.stat-item p {
+	font-size: 16px;
+	color: #666;
+}
+.container {
+	padding: 50px 20px;
+	background: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin: 20px auto;
+	max-width: 1200px;
+	border-radius: 10px;
+}
+.about-grid {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.about-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.about-item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.about-item img {
+	width: 50px;
+	height: 50px;
+	object-fit: contain;
+}
+.about-item h3 {
+	font-size: 20px;
+	color: #003366;
+	margin: 0;
+}
+.about-item p {
+	font-size: 16px;
+	color: #666;
+	margin: 0;
+}
+.about-image {
+	flex: 1;
+	max-width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.services {
+	background: #f4f4f4;
+	padding: 50px 20px;
+	text-align: center;
+}
+.services-grid {
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.service-card {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 20px;
+	max-width: 300px;
+	text-align: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.service-card img {
+	max-width: 100%;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+.interactive-video {
+	background: #f4f4f4;
+	padding: 30px 20px;
+	text-align: center;
+}
+.interactive-video h2 {
+	font-size: 24px;
+	color: #003366;
+	margin-bottom: 10px;
+}
+.interactive-video p {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 15px;
+}
+.video-container {
+	max-width: 500px;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 40%;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.contact {
+	background: #f4f4f4;
+	padding: 50px 20px;
+	text-align: center;
+}
+.contact form {
+	max-width: 600px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.contact input, .contact textarea {
+	width: 100%;
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 16px;
+}
+.contact button {
+	background: #003366;
+	color: #fff;
+	padding: 15px;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+.contact button:hover {
+	background: #0056b3;
+}
+footer {
+	background: #003366;
+	color: #fff;
+	padding: 30px 20px;
+	font-size: 14px;
+}
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.footer-links, .footer-socials, .footer-contact {
+	flex: 1;
+	min-width: 200px;
+}
+.footer-links h4, .footer-socials h4, .footer-contact h4 {
+	font-size: 16px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: #ff9900;
+}
+.footer-links ul, .footer-socials ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.footer-links ul li, .footer-socials ul li {
+	margin-bottom: 5px;
+}
+.footer-links ul li a, .footer-socials ul li a {
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+.footer-links ul li a:hover, .footer-socials ul li a:hover {
+	color: #ff9900;
+}
+.footer-contact p {
+	margin: 5px 0;
+}
+.footer-contact a {
+	color: #ff9900;
+	text-decoration: none;
+}
+.footer-contact a:hover {
+	text-decoration: underline;
+}
+.footer-bottom {
+	text-align: center;
+	margin-top: 20px;
+	border-top: 1px solid #fff;
+	padding-top: 10px;
+	font-size: 12px;
+	color: #ccc;
+}
+@media (max-width: 900px) { .about-grid, .services-grid, .footer-container { flex-direction: column; align-items: center; } .about-image { margin-top: 2em; } }
