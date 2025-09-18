@@ -1,87 +1,124 @@
-{% extends 'main/base.html' %}
-{% block title %}Our Services | Zuhayrān Oil & Gas{% endblock %}
-{% block content %}
-<section class="services-page py-5" style="background: linear-gradient(90deg, #f4f4f4 80%, #e0f7fa 100%);">
-    <div class="container">
-        <h1 class="text-center mb-4">Our Services</h1>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 shadow service-card" data-aos="fade-up">
-                    <img src="/static/img/3d-rendering-gas-cylinder.jpg" class="card-img-top" alt="Gas Cylinder" style="height:180px; object-fit:cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <i class="bi bi-droplet-half"></i> Gas Cylinder Production
-                            <span class="badge bg-warning text-dark ms-2">Top Safety</span>
-                        </h5>
-                        <ul class="list-unstyled small mb-2">
-                            <li>• Advanced safety standards</li>
-                            <li>• Custom sizes available</li>
-                        </ul>
-                        <p class="card-text">High-quality gas cylinder manufacturing for industrial and domestic use.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow service-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="/static/img/pollution-industry-exterior-daylight.jpg" class="card-img-top" alt="Industrial Pollution Control" style="height:180px; object-fit:cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <i class="bi bi-cloud-fog2"></i> Industrial Pollution Control
-                            <span class="badge bg-success ms-2">Eco-Friendly</span>
-                        </h5>
-                        <ul class="list-unstyled small mb-2">
-                            <li>• Innovative emission solutions</li>
-                            <li>• Regulatory compliance</li>
-                        </ul>
-                        <p class="card-text">Innovative solutions to minimize environmental impact in industrial operations.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow service-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="/static/img/worker-oil-rig-sunset-created-with-generative-ai-technology.jpg" class="card-img-top" alt="Oil Rig Operations" style="height:180px; object-fit:cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <i class="bi bi-gear-wide-connected"></i> Oil Rig Operations
-                            <span class="badge bg-primary ms-2">24/7 Support</span>
-                        </h5>
-                        <ul class="list-unstyled small mb-2">
-                            <li>• Cutting-edge technology</li>
-                            <li>• Safety & efficiency</li>
-                        </ul>
-                        <p class="card-text">Efficient and safe oil rig operations powered by advanced technology.</p>
-                    </div>
-                </div>
-            </div>
+{% extends 'main/base.html' %} {% block title %}Our Services | Zuhayrān Oil &
+Gas{% endblock %} {% block content %}
+<section
+  class="services-page py-5"
+  style="background: linear-gradient(90deg, #f4f4f4 80%, #e0f7fa 100%)"
+>
+  <div class="container">
+    <h1 class="text-center mb-4">Our Services</h1>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow service-card" data-aos="fade-up">
+          <img
+            src="/static/img/3d-rendering-gas-cylinder.jpg"
+            class="card-img-top"
+            alt="Gas Cylinder"
+            style="height: 180px; object-fit: cover"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-droplet-half"></i> Gas Cylinder Production
+              <span class="badge bg-warning text-dark ms-2">Top Safety</span>
+            </h5>
+            <ul class="list-unstyled small mb-2">
+              <li>• Advanced safety standards</li>
+              <li>• Custom sizes available</li>
+            </ul>
+            <p class="card-text">
+              High-quality gas cylinder manufacturing for industrial and
+              domestic use.
+            </p>
+          </div>
         </div>
-        <div class="text-center mt-5">
-            <a href="{% url 'contact' %}" class="btn btn-primary btn-lg shadow">Contact Us for a Quote</a>
+      </div>
+      <div class="col-md-4">
+        <div
+          class="card h-100 shadow service-card"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <img
+            src="/static/img/pollution-industry-exterior-daylight.jpg"
+            class="card-img-top"
+            alt="Industrial Pollution Control"
+            style="height: 180px; object-fit: cover"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-cloud-fog2"></i> Industrial Pollution Control
+              <span class="badge bg-success ms-2">Eco-Friendly</span>
+            </h5>
+            <ul class="list-unstyled small mb-2">
+              <li>• Innovative emission solutions</li>
+              <li>• Regulatory compliance</li>
+            </ul>
+            <p class="card-text">
+              Innovative solutions to minimize environmental impact in
+              industrial operations.
+            </p>
+          </div>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div
+          class="card h-100 shadow service-card"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <img
+            src="/static/img/worker-oil-rig-sunset-created-with-generative-ai-technology.jpg"
+            class="card-img-top"
+            alt="Oil Rig Operations"
+            style="height: 180px; object-fit: cover"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-gear-wide-connected"></i> Oil Rig Operations
+              <span class="badge bg-primary ms-2">24/7 Support</span>
+            </h5>
+            <ul class="list-unstyled small mb-2">
+              <li>• Cutting-edge technology</li>
+              <li>• Safety & efficiency</li>
+            </ul>
+            <p class="card-text">
+              Efficient and safe oil rig operations powered by advanced
+              technology.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="text-center mt-5">
+      <a href="{% url 'contact' %}" class="btn btn-primary btn-lg shadow"
+        >Contact Us for a Quote</a
+      >
+    </div>
+  </div>
 </section>
 <!-- Optional: AOS Animation Library -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+<script src="{% static 'js/aos-init-basic.js' %}"></script>
 <style>
-    .service-card {
-        border-radius: 14px;
-        transition: transform 0.2s, box-shadow 0.2s;
-        overflow: hidden;
-    }
-    .service-card:hover {
-        transform: translateY(-8px) scale(1.03);
-        box-shadow: 0 8px 32px rgba(2,138,158,0.13);
-    }
-    .service-card .card-title i {
-        color: #028A9E;
-        margin-right: 8px;
-    }
-    .service-card .badge {
-        font-size: 0.85em;
-        vertical-align: middle;
-    }
+  .service-card {
+    border-radius: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+  }
+  .service-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(2, 138, 158, 0.13);
+  }
+  .service-card .card-title i {
+    color: #028a9e;
+    margin-right: 8px;
+  }
+  .service-card .badge {
+    font-size: 0.85em;
+    vertical-align: middle;
+  }
 </style>
 {% endblock %}

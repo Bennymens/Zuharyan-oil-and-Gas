@@ -1,53 +1,93 @@
-{% extends 'main/base.html' %}
-{% load static %}
-{% block title %}About Us | Zuhayrān Oil & Natural Gas{% endblock %}
-{% block content %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+{% extends 'main/base.html' %} {% load static %} {% block title %}About Us |
+Zuhayrān Oil & Natural Gas{% endblock %} {% block content %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+/>
 
 <div class="container py-5">
-    <h1 class="text-center mb-4" data-aos="fade-down"><i class="bi bi-info-circle text-primary"></i> About Zuhayrān Oil & Natural Gas</h1>
-    <!-- Who We Are -->
-    <div class="row align-items-center mb-5" data-aos="fade-up">
-        <div class="col-md-6 mb-3 mb-md-0">
-            <img src="{% static 'img/backyard-winery-sunset-with-metal-wine-storage-tanks.jpg' %}"
-                 alt="Who We Are"
-                 class="img-fluid rounded shadow"
-                 style="object-fit:cover; width:100%; max-height:320px;">
-        </div>
-        <div class="col-md-6">
-            <h3 class="mb-2"><i class="bi bi-people-fill text-success"></i> Who We Are</h3>
-            <p>Zuhayrān Oil & Natural Gas is dedicated to shaping the future of energy responsibly, efficiently, and intelligently. Our passionate team partners with clients from concept to completion, delivering innovative technology and sustainable practices for every project.</p>
-        </div>
+  <h1 class="text-center mb-4" data-aos="fade-down">
+    <i class="bi bi-info-circle text-primary"></i> About Zuhayrān Oil & Natural
+    Gas
+  </h1>
+  <!-- Who We Are -->
+  <div class="row align-items-center mb-5" data-aos="fade-up">
+    <div class="col-md-6 mb-3 mb-md-0">
+      <img
+        src="{% static 'img/backyard-winery-sunset-with-metal-wine-storage-tanks.jpg' %}"
+        alt="Who We Are"
+        class="img-fluid rounded shadow"
+        style="object-fit: cover; width: 100%; max-height: 320px"
+      />
     </div>
-    <!-- Why We're Different -->
-    <div class="row align-items-center flex-md-row-reverse mb-5" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-md-6 mb-3 mb-md-0">
-            <img src="{% static 'img/environmental-pollution-industry-exterior.jpg' %}"
-                 alt="Why We're Different"
-                 class="img-fluid rounded shadow"
-                 style="object-fit:cover; width:100%; max-height:220px;">
-        </div>
-        <div class="col-md-6">
-            <h3 class="mb-2"><i class="bi bi-lightbulb text-warning"></i> Why We're Different</h3>
-            <p>We combine deep industry expertise with a commitment to safety, reliability, and environmental stewardship. Our philosophy is to exceed expectations by partnering closely with clients and delivering tailored solutions that drive progress and sustainability.</p>
-        </div>
+    <div class="col-md-6">
+      <h3 class="mb-2">
+        <i class="bi bi-people-fill text-success"></i> Who We Are
+      </h3>
+      <p>
+        Zuhayrān Oil & Natural Gas is dedicated to shaping the future of energy
+        responsibly, efficiently, and intelligently. Our passionate team
+        partners with clients from concept to completion, delivering innovative
+        technology and sustainable practices for every project.
+      </p>
     </div>
-    <!-- Our Vision -->
-    <div class="row align-items-center mb-5" data-aos="fade-up" data-aos-delay="200">
-        <div class="col-md-6 mb-3 mb-md-0">
-            <img src="{% static 'img/petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation.jpg' %}"
-                 alt="Our Vision"
-                 class="img-fluid rounded shadow"
-                 style="object-fit:cover; width:100%; max-height:220px;">
-        </div>
-        <div class="col-md-6">
-            <h3 class="mb-2"><i class="bi bi-eye text-info"></i> Our Vision</h3>
-            <p>To craft essential products that enhance everyday life while upholding the highest standards of safety and reliability. We strive to be a leader in energy innovation, empowering communities and industries for a brighter, sustainable future.</p>
-        </div>
+  </div>
+  <!-- Why We're Different -->
+  <div
+    class="row align-items-center flex-md-row-reverse mb-5"
+    data-aos="fade-up"
+    data-aos-delay="100"
+  >
+    <div class="col-md-6 mb-3 mb-md-0">
+      <img
+        src="{% static 'img/environmental-pollution-industry-exterior.jpg' %}"
+        alt="Why We're Different"
+        class="img-fluid rounded shadow"
+        style="object-fit: cover; width: 100%; max-height: 220px"
+      />
     </div>
+    <div class="col-md-6">
+      <h3 class="mb-2">
+        <i class="bi bi-lightbulb text-warning"></i> Why We're Different
+      </h3>
+      <p>
+        We combine deep industry expertise with a commitment to safety,
+        reliability, and environmental stewardship. Our philosophy is to exceed
+        expectations by partnering closely with clients and delivering tailored
+        solutions that drive progress and sustainability.
+      </p>
+    </div>
+  </div>
+  <!-- Our Vision -->
+  <div
+    class="row align-items-center mb-5"
+    data-aos="fade-up"
+    data-aos-delay="200"
+  >
+    <div class="col-md-6 mb-3 mb-md-0">
+      <img
+        src="{% static 'img/petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation.jpg' %}"
+        alt="Our Vision"
+        class="img-fluid rounded shadow"
+        style="object-fit: cover; width: 100%; max-height: 220px"
+      />
+    </div>
+    <div class="col-md-6">
+      <h3 class="mb-2"><i class="bi bi-eye text-info"></i> Our Vision</h3>
+      <p>
+        To craft essential products that enhance everyday life while upholding
+        the highest standards of safety and reliability. We strive to be a
+        leader in energy innovation, empowering communities and industries for a
+        brighter, sustainable future.
+      </p>
+    </div>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({ once: true, duration: 900 });</script>
+<script src="{% static 'js/aos-init.js' %}"></script>
 {% endblock %}
