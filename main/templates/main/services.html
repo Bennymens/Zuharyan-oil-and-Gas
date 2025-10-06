@@ -1,5 +1,5 @@
-{% extends 'main/base.html' %} {% block title %}Our Services | Zuhayrān Oil &
-Gas{% endblock %} {% block content %}
+{% extends 'main/base.html' %} {% load static %} {% block title %}Our Services |
+Zuhayrān Oil & Gas{% endblock %} {% block content %}
 <section
   class="services-page py-5"
   style="background: linear-gradient(90deg, #f4f4f4 80%, #e0f7fa 100%)"
@@ -10,7 +10,7 @@ Gas{% endblock %} {% block content %}
       <div class="col-md-4">
         <div class="card h-100 shadow service-card" data-aos="fade-up">
           <img
-            src="/static/img/3d-rendering-gas-cylinder.jpg"
+            src="{% static 'img/3d-rendering-gas-cylinder.jpg' %}"
             class="card-img-top"
             alt="Gas Cylinder"
             style="height: 180px; object-fit: cover"
@@ -38,7 +38,7 @@ Gas{% endblock %} {% block content %}
           data-aos-delay="100"
         >
           <img
-            src="/static/img/pollution-industry-exterior-daylight.jpg"
+            src="{% static 'img/pollution-industry-exterior-daylight.jpg' %}"
             class="card-img-top"
             alt="Industrial Pollution Control"
             style="height: 180px; object-fit: cover"
@@ -66,7 +66,7 @@ Gas{% endblock %} {% block content %}
           data-aos-delay="200"
         >
           <img
-            src="/static/img/worker-oil-rig-sunset-created-with-generative-ai-technology.jpg"
+            src="{% static 'img/worker-oil-rig-sunset-created-with-generative-ai-technology.jpg' %}"
             class="card-img-top"
             alt="Oil Rig Operations"
             style="height: 180px; object-fit: cover"

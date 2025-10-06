@@ -3,6 +3,7 @@
 ## Pre-Deployment Checklist ✅
 
 ### Security Configuration
+
 - [x] All credentials moved to environment variables
 - [x] DEBUG set to False by default
 - [x] HTTPS/SSL redirect enabled in production
@@ -25,6 +26,7 @@ EMAIL_HOST_PASSWORD=<your-gmail-app-password>
 ```
 
 Optional (use DATABASE_URL for PostgreSQL in production):
+
 ```bash
 DATABASE_URL=postgresql://user:password@host:port/dbname
 ```
@@ -44,6 +46,7 @@ Copy the output and set it as your SECRET_KEY environment variable.
 ### For Render.com:
 
 1. **Push your code to GitHub**
+
    ```bash
    git add .
    git commit -m "Prepare for production deployment with security fixes"
@@ -51,12 +54,14 @@ Copy the output and set it as your SECRET_KEY environment variable.
    ```
 
 2. **Create a new Web Service on Render**
+
    - Connect your GitHub repository
    - Select Python environment
    - Build Command: `pip install -r requirements.txt && python manage.py collectstatic --noinput`
    - Start Command: `gunicorn oilandgas.wsgi`
 
 3. **Set Environment Variables** (in Render Dashboard)
+
    - Go to Environment → Add Environment Variables
    - Add all required variables listed above
    - **IMPORTANT:** Set `DEBUG=False`
@@ -70,10 +75,12 @@ Copy the output and set it as your SECRET_KEY environment variable.
 1. **Push code to GitHub** (same as above)
 
 2. **Create new project on Railway**
+
    - Connect GitHub repository
    - Railway auto-detects Django
 
 3. **Set Environment Variables**
+
    - Go to Variables tab
    - Add all required environment variables
    - Railway provides DATABASE_URL automatically if you add PostgreSQL
@@ -84,6 +91,7 @@ Copy the output and set it as your SECRET_KEY environment variable.
 ### For Other Platforms (Heroku, DigitalOcean, etc.):
 
 Follow similar steps:
+
 1. Push code to repository
 2. Connect platform to your repo
 3. Set environment variables
@@ -94,16 +102,19 @@ Follow similar steps:
 ## Post-Deployment Tasks
 
 1. **Run migrations** (if deploying to new database):
+
    ```bash
    python manage.py migrate
    ```
 
 2. **Create superuser** (for admin access):
+
    ```bash
    python manage.py createsuperuser
    ```
 
 3. **Test your deployment:**
+
    - Visit your site URL
    - Test contact form
    - Check all pages load correctly
@@ -119,15 +130,18 @@ Follow similar steps:
 ## Database Recommendations
 
 ### Development:
+
 - SQLite (current setup) - OK for testing
 
 ### Production:
+
 - **PostgreSQL** (recommended for production)
 - More reliable and scalable than SQLite
 - Better concurrency handling
 - Supported by all major hosting platforms
 
 To switch to PostgreSQL, set the DATABASE_URL environment variable:
+
 ```
 DATABASE_URL=postgresql://username:password@hostname:5432/database_name
 ```
@@ -154,11 +168,13 @@ The app will automatically use it (already configured with dj-database-url).
 ## Scaling Considerations
 
 Current setup supports:
+
 - Up to ~1000 concurrent users with gunicorn
 - Static files served efficiently via Whitenoise
 - Database connection pooling enabled
 
 For higher traffic:
+
 - Add more gunicorn workers
 - Upgrade to larger database instance
 - Consider CDN for static files
@@ -168,20 +184,24 @@ For higher traffic:
 ## Troubleshooting
 
 ### Static files not loading:
+
 ```bash
 python manage.py collectstatic --clear
 ```
 
 ### Database errors:
+
 - Check DATABASE_URL is set correctly
 - Run migrations: `python manage.py migrate`
 
 ### Email not sending:
+
 - Verify EMAIL_HOST_USER and EMAIL_HOST_PASSWORD
 - Check Gmail app password is correct
 - Ensure 2FA is enabled on Gmail account
 
 ### 500 errors:
+
 - Check DEBUG=False is set
 - Review application logs
 - Verify all environment variables are set
@@ -190,6 +210,7 @@ python manage.py collectstatic --clear
 ## Support
 
 For issues or questions:
+
 - Check application logs first
 - Review Django documentation: https://docs.djangoproject.com
 - Check hosting platform docs
