@@ -2,8 +2,8 @@ services:
   - type: web
     name: zuhayran-oil-and-gas
     env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: gunicorn oilandgas.wsgi
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate"
+    startCommand: gunicorn oilandgas.wsgi --log-file -
     envVars:
       - key: DEBUG
         value: False
@@ -11,3 +11,13 @@ services:
         generateValue: true
       - key: ALLOWED_HOSTS
         value: zuhayran-oil-and-gas.onrender.com
+      - key: PYTHON_VERSION
+        value: 3.13.0
+      - key: EMAIL_BACKEND
+        value: django.core.mail.backends.smtp.EmailBackend
+      - key: EMAIL_HOST
+        value: smtp.gmail.com
+      - key: EMAIL_PORT
+        value: 587
+      - key: EMAIL_USE_TLS
+        value: True
