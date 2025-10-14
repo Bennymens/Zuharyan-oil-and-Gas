@@ -5,6 +5,7 @@
 After deploying to Render, you need to manually add these environment variables in the Render dashboard:
 
 ### Required Variables:
+
 ```
 EMAIL_HOST_USER=your-email@gmail.com
 EMAIL_HOST_PASSWORD=your-gmail-app-password
@@ -12,6 +13,7 @@ DEFAULT_FROM_EMAIL=your-email@gmail.com
 ```
 
 ### Optional (if using PostgreSQL):
+
 ```
 DATABASE_URL=postgresql://user:password@host:port/dbname
 ```
@@ -19,6 +21,7 @@ DATABASE_URL=postgresql://user:password@host:port/dbname
 ## Deployment Steps:
 
 1. **Push your code to GitHub**
+
    ```bash
    git add .
    git commit -m "Prepare for Render deployment"
@@ -26,17 +29,20 @@ DATABASE_URL=postgresql://user:password@host:port/dbname
    ```
 
 2. **Create Web Service on Render**
+
    - Go to https://render.com
    - Click "New +" → "Web Service"
    - Connect your GitHub repository: `Bennymens/Zuharyan-oil-and-Gas`
    - Render will auto-detect the `render.yaml` configuration
 
 3. **Add Email Environment Variables**
+
    - Go to your service's "Environment" tab
    - Add the required variables listed above
    - Click "Save Changes"
 
 4. **Deploy**
+
    - Render will automatically trigger a deployment
    - Monitor the logs for any errors
    - Wait for the build to complete
@@ -69,6 +75,7 @@ gunicorn oilandgas.wsgi --log-file -
 ## Static Files:
 
 Static files are served by Whitenoise (configured in settings.py):
+
 - Compressed and cached automatically
 - No separate static file server needed
 - Production-ready performance
@@ -85,21 +92,25 @@ Static files are served by Whitenoise (configured in settings.py):
 ## Troubleshooting:
 
 ### Build fails:
+
 - Check that all dependencies are in `requirements.txt`
 - Verify Python version compatibility (3.13.0)
 - Check build logs for specific errors
 
 ### Static files not loading:
+
 - Ensure `collectstatic` ran successfully in build command
 - Check that Whitenoise is in MIDDLEWARE (settings.py)
 - Verify STATIC_ROOT is set correctly
 
 ### Site won't load:
+
 - Check `ALLOWED_HOSTS` includes your Render domain
 - Verify `DEBUG=False` is set
 - Check application logs for errors
 
 ### Contact form not working:
+
 - Verify email environment variables are set
 - Check Gmail app password is correct
 - Ensure 2FA is enabled on Gmail account

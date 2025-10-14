@@ -1,124 +1,713 @@
 {% extends 'main/base.html' %} {% load static %} {% block title %}Our Services |
 Zuhayrān Oil & Gas{% endblock %} {% block content %}
-<section
-  class="services-page py-5"
-  style="background: linear-gradient(90deg, #f4f4f4 80%, #e0f7fa 100%)"
->
+
+<!-- Stats Section -->
+<section class="py-5" style="background: #f8f9fa">
   <div class="container">
-    <h1 class="text-center mb-4">Our Services</h1>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 shadow service-card" data-aos="fade-up">
-          <img
-            src="{% static 'img/3d-rendering-gas-cylinder.jpg' %}"
-            class="card-img-top"
-            alt="Gas Cylinder"
-            style="height: 180px; object-fit: cover"
-          />
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="bi bi-droplet-half"></i> Gas Cylinder Production
-              <span class="badge bg-warning text-dark ms-2">Top Safety</span>
-            </h5>
-            <ul class="list-unstyled small mb-2">
-              <li>• Advanced safety standards</li>
-              <li>• Custom sizes available</li>
-            </ul>
-            <p class="card-text">
-              High-quality gas cylinder manufacturing for industrial and
-              domestic use.
-            </p>
-          </div>
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="0">
+        <div class="stat-box p-4">
+          <h2 class="display-4 fw-bold" style="color: #003366">500+</h2>
+          <p class="text-muted mb-0">Projects Completed</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div
-          class="card h-100 shadow service-card"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <img
-            src="{% static 'img/pollution-industry-exterior-daylight.jpg' %}"
-            class="card-img-top"
-            alt="Industrial Pollution Control"
-            style="height: 180px; object-fit: cover"
-          />
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="bi bi-cloud-fog2"></i> Industrial Pollution Control
-              <span class="badge bg-success ms-2">Eco-Friendly</span>
-            </h5>
-            <ul class="list-unstyled small mb-2">
-              <li>• Innovative emission solutions</li>
-              <li>• Regulatory compliance</li>
-            </ul>
-            <p class="card-text">
-              Innovative solutions to minimize environmental impact in
-              industrial operations.
-            </p>
-          </div>
+      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="stat-box p-4">
+          <h2 class="display-4 fw-bold" style="color: #003366">99.8%</h2>
+          <p class="text-muted mb-0">Safety Record</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div
-          class="card h-100 shadow service-card"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <img
-            src="{% static 'img/worker-oil-rig-sunset-created-with-generative-ai-technology.jpg' %}"
-            class="card-img-top"
-            alt="Oil Rig Operations"
-            style="height: 180px; object-fit: cover"
-          />
-          <div class="card-body">
-            <h5 class="card-title">
-              <i class="bi bi-gear-wide-connected"></i> Oil Rig Operations
-              <span class="badge bg-primary ms-2">24/7 Support</span>
-            </h5>
-            <ul class="list-unstyled small mb-2">
-              <li>• Cutting-edge technology</li>
-              <li>• Safety & efficiency</li>
-            </ul>
-            <p class="card-text">
-              Efficient and safe oil rig operations powered by advanced
-              technology.
-            </p>
-          </div>
+      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+        <div class="stat-box p-4">
+          <h2 class="display-4 fw-bold" style="color: #003366">24/7</h2>
+          <p class="text-muted mb-0">Support Available</p>
         </div>
       </div>
-    </div>
-    <div class="text-center mt-5">
-      <a href="{% url 'contact' %}" class="btn btn-primary btn-lg shadow"
-        >Contact Us for a Quote</a
-      >
+      <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="stat-box p-4">
+          <h2 class="display-4 fw-bold" style="color: #003366">150+</h2>
+          <p class="text-muted mb-0">Industry Partners</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- Optional: AOS Animation Library -->
+
+<!-- Services Grid Section -->
+<section id="services-grid" class="services-page py-5">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold mb-3" style="color: #003366">What We Offer</h2>
+      <p class="text-muted fs-5">
+        Industry-leading services powered by innovation and expertise
+      </p>
+    </div>
+
+    <!-- Core Services -->
+    <div class="row g-4 mb-5 justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div
+          class="card h-100 border-0 shadow-lg service-card"
+          data-aos="fade-up"
+        >
+          <div class="position-relative overflow-hidden">
+            <img
+              src="{% static 'img/3d-rendering-gas-cylinder.jpg' %}"
+              class="card-img-top service-img"
+              alt="Gas Cylinder Production"
+              style="
+                height: 250px;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+              "
+            />
+            <div class="position-absolute top-0 end-0 m-3">
+              <span class="badge bg-warning text-dark px-3 py-2"
+                >⭐ Core Service</span
+              >
+            </div>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div
+                class="service-icon me-3"
+                style="
+                  width: 50px;
+                  height: 50px;
+                  background: linear-gradient(135deg, #ff9900, #ffb347);
+                  border-radius: 12px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 24px;
+                "
+              >
+                🛢️
+              </div>
+              <h5 class="card-title mb-0 fw-bold">Gas Cylinder Production</h5>
+            </div>
+            <p class="card-text text-muted mb-3">
+              High-quality gas cylinder manufacturing for industrial and
+              domestic use with advanced safety standards.
+            </p>
+            <ul class="list-unstyled mb-3 flex-grow-1">
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>ISO
+                9001 Certified Manufacturing
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Custom
+                Sizes Available
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >Rigorous Safety Testing
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Fast
+                Delivery Nationwide
+              </li>
+            </ul>
+            <a
+              href="{% url 'contact' %}"
+              class="btn btn-outline-primary w-100 fw-semibold"
+              >Request Quote →</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div
+          class="card h-100 border-0 shadow-lg service-card"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="position-relative overflow-hidden">
+            <img
+              src="{% static 'img/pollution-industry-exterior-daylight.jpg' %}"
+              class="card-img-top service-img"
+              alt="Industrial Pollution Control"
+              style="
+                height: 250px;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+              "
+            />
+            <div class="position-absolute top-0 end-0 m-3">
+              <span class="badge bg-success px-3 py-2">🌱 Eco-Friendly</span>
+            </div>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div
+                class="service-icon me-3"
+                style="
+                  width: 50px;
+                  height: 50px;
+                  background: linear-gradient(135deg, #28a745, #5cb85c);
+                  border-radius: 12px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 24px;
+                "
+              >
+                🌿
+              </div>
+              <h5 class="card-title mb-0 fw-bold">Pollution Control</h5>
+            </div>
+            <p class="card-text text-muted mb-3">
+              Innovative solutions to minimize environmental impact and ensure
+              regulatory compliance in industrial operations.
+            </p>
+            <ul class="list-unstyled mb-3 flex-grow-1">
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >Emission Reduction Systems
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >Environmental Audits
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >Compliance Monitoring
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Green
+                Technology Integration
+              </li>
+            </ul>
+            <a
+              href="{% url 'contact' %}"
+              class="btn btn-outline-success w-100 fw-semibold"
+              >Learn More →</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div
+          class="card h-100 border-0 shadow-lg service-card"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="position-relative overflow-hidden">
+            <img
+              src="{% static 'img/worker-oil-rig-sunset-created-with-generative-ai-technology.jpg' %}"
+              class="card-img-top service-img"
+              alt="Oil Rig Operations"
+              style="
+                height: 250px;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+              "
+            />
+            <div class="position-absolute top-0 end-0 m-3">
+              <span class="badge bg-primary px-3 py-2">⚡ 24/7 Support</span>
+            </div>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <div
+                class="service-icon me-3"
+                style="
+                  width: 50px;
+                  height: 50px;
+                  background: linear-gradient(135deg, #003366, #0066cc);
+                  border-radius: 12px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 24px;
+                "
+              >
+                ⚙️
+              </div>
+              <h5 class="card-title mb-0 fw-bold">Oil Rig Operations</h5>
+            </div>
+            <p class="card-text text-muted mb-3">
+              Efficient and safe oil rig operations powered by cutting-edge
+              technology and expert personnel.
+            </p>
+            <ul class="list-unstyled mb-3 flex-grow-1">
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >Advanced Drilling Technology
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>24/7
+                Operations Support
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >Safety-First Protocols
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >Real-Time Monitoring
+              </li>
+            </ul>
+            <a
+              href="{% url 'contact' %}"
+              class="btn btn-outline-primary w-100 fw-semibold"
+              >Get Started →</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Services -->
+    <div class="row g-4">
+      <div class="col-12 col-md-6">
+        <div
+          class="card border-0 shadow service-card-alt"
+          data-aos="fade-right"
+        >
+          <div class="card-body p-4">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center mb-3 mb-md-0">
+                <div
+                  class="service-icon-large"
+                  style="
+                    width: 80px;
+                    height: 80px;
+                    background: linear-gradient(135deg, #17a2b8, #5bc0de);
+                    border-radius: 16px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 36px;
+                  "
+                >
+                  🔧
+                </div>
+              </div>
+              <div class="col-md-9">
+                <h5 class="fw-bold mb-2">Equipment Maintenance & Repair</h5>
+                <p class="text-muted mb-3">
+                  Preventive maintenance and rapid repair services to maximize
+                  uptime and equipment longevity.
+                </p>
+                <a
+                  href="{% url 'contact' %}"
+                  class="text-decoration-none fw-semibold"
+                  >Contact Us →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card border-0 shadow service-card-alt" data-aos="fade-left">
+          <div class="card-body p-4">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center mb-3 mb-md-0">
+                <div
+                  class="service-icon-large"
+                  style="
+                    width: 80px;
+                    height: 80px;
+                    background: linear-gradient(135deg, #6f42c1, #9b59b6);
+                    border-radius: 16px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 36px;
+                  "
+                >
+                  📊
+                </div>
+              </div>
+              <div class="col-md-9">
+                <h5 class="fw-bold mb-2">Energy Consulting Services</h5>
+                <p class="text-muted mb-3">
+                  Expert guidance on energy optimization, cost reduction, and
+                  sustainable practices for your operations.
+                </p>
+                <a
+                  href="{% url 'contact' %}"
+                  class="text-decoration-none fw-semibold"
+                  >Learn More →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section with Quick Quote Form -->
+<section id="quote-form" class="py-5" style="background: #f8f9fa">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-7">
+        <div class="text-center mb-5" data-aos="fade-down">
+          <h2 class="fw-bold mb-3 display-5" style="color: #003366">
+            Get a Free Quote
+          </h2>
+          <p class="lead text-muted">
+            Fill out the form below and we'll get back to you within 24 hours
+          </p>
+        </div>
+
+        <div
+          class="card border-0 shadow-lg"
+          style="border-radius: 20px"
+          data-aos="fade-up"
+        >
+          <div class="card-body p-4 p-md-5">
+            <form
+              method="POST"
+              action="{% url 'contact' %}"
+              id="quickQuoteForm"
+            >
+              {% csrf_token %}
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label text-dark fw-semibold"
+                    >Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    required
+                    style="border-radius: 10px; border: 2px solid #e9ecef"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label text-dark fw-semibold"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    id="email"
+                    name="email"
+                    placeholder="john@company.com"
+                    required
+                    style="border-radius: 10px; border: 2px solid #e9ecef"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label text-dark fw-semibold"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control form-control-lg"
+                    id="phone"
+                    name="phone"
+                    placeholder="+1 234 567 8900"
+                    style="border-radius: 10px; border: 2px solid #e9ecef"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="service" class="form-label text-dark fw-semibold"
+                    >Service Interested In *</label
+                  >
+                  <select
+                    class="form-select form-select-lg"
+                    id="service"
+                    name="service"
+                    required
+                    style="border-radius: 10px; border: 2px solid #e9ecef"
+                  >
+                    <option value="">Select a service...</option>
+                    <option value="Gas Cylinder Production">
+                      Gas Cylinder Production
+                    </option>
+                    <option value="Pollution Control">Pollution Control</option>
+                    <option value="Oil Rig Operations">
+                      Oil Rig Operations
+                    </option>
+                    <option value="Equipment Maintenance">
+                      Equipment Maintenance & Repair
+                    </option>
+                    <option value="Energy Consulting">
+                      Energy Consulting Services
+                    </option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label text-dark fw-semibold"
+                    >Project Details *</label
+                  >
+                  <textarea
+                    class="form-control form-control-lg"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Tell us about your project requirements, timeline, and any specific needs..."
+                    required
+                    style="border-radius: 10px; border: 2px solid #e9ecef"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button
+                    type="submit"
+                    class="btn btn-lg w-100 fw-semibold shadow-lg quote-submit-btn"
+                    style="
+                      background: linear-gradient(135deg, #003366, #0066cc);
+                      color: white;
+                      border: none;
+                      border-radius: 10px;
+                      padding: 15px;
+                      font-size: 18px;
+                    "
+                  >
+                    🚀 Request Free Quote
+                  </button>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <div
+                    class="d-flex justify-content-center gap-4 flex-wrap mb-3"
+                  >
+                    <small class="text-dark"
+                      ><i class="bi bi-shield-check text-success"></i> Secure &
+                      Confidential</small
+                    >
+                    <small class="text-dark"
+                      ><i class="bi bi-clock text-primary"></i> 24 Hour
+                      Response</small
+                    >
+                    <small class="text-dark"
+                      ><i class="bi bi-check-circle text-success"></i> No
+                      Obligation</small
+                    >
+                  </div>
+                  <div class="d-flex justify-content-center gap-3 mt-3">
+                    <a href="tel:+1234567890" class="btn btn-outline-primary"
+                      >📞 Call: +1 234 567 890</a
+                    >
+                    <a
+                      href="mailto:info@zuhayran.com"
+                      class="btn btn-outline-secondary"
+                      >✉️ Email Us</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AOS Animation Library -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
 />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="{% static 'js/aos-init-basic.js' %}"></script>
+
 <style>
+  /* Container max-width adjustment */
+  .services-page .container {
+    max-width: 1400px;
+  }
+
+  /* Hero Service Icon Cards */
+  .service-icon-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  .service-icon-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .service-icon-card h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  /* Service Card Hover Effects */
   .service-card {
-    border-radius: 14px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    cursor: pointer;
+    max-width: 420px;
+    margin: 0 auto;
   }
+
   .service-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(2, 138, 158, 0.13);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.2) !important;
   }
-  .service-card .card-title i {
-    color: #028a9e;
-    margin-right: 8px;
+
+  .service-card:hover .service-img {
+    transform: scale(1.1);
   }
-  .service-card .badge {
-    font-size: 0.85em;
-    vertical-align: middle;
+
+  /* Alternative Service Card */
+  .service-card-alt {
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    background: white;
+  }
+
+  .service-card-alt:hover {
+    transform: translateX(8px);
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.15) !important;
+  }
+
+  /* Stat Box Animation */
+  .stat-box {
+    background: white;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .services-hero {
+      padding: 60px 20px 50px !important;
+    }
+
+    .services-hero h1 {
+      font-size: 2.5rem !important;
+    }
+
+    .display-2 {
+      font-size: 2.5rem !important;
+    }
+
+    .service-card {
+      margin-bottom: 20px;
+    }
+
+    .display-3 {
+      font-size: 2.5rem;
+    }
+
+    .display-4 {
+      font-size: 2rem;
+    }
+
+    .service-icon-card {
+      padding: 20px 15px;
+    }
+
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .services-hero h1 {
+      font-size: 2rem !important;
+    }
+
+    .lead {
+      font-size: 1rem !important;
+    }
+
+    .btn-lg {
+      padding: 12px 30px !important;
+      font-size: 1rem !important;
+    }
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Button hover effects */
+  .btn-outline-primary:hover,
+  .btn-outline-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Badge animations */
+  .badge {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  /* Quote submit button hover */
+  .quote-submit-btn {
+    transition: all 0.3s ease;
+  }
+
+  .quote-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.3) !important;
   }
 </style>
+
 {% endblock %}
