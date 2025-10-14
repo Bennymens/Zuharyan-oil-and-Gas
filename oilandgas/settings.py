@@ -1,4 +1,3 @@
-
 """
 Django settings for oilandgas project.
 
@@ -29,11 +28,19 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-development-key-chang
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+# ALLOWED_HOSTS configuration - works for both local and Render
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+]
 
+# Add Render hostname if it exists
+if os.environ.get('RENDER_EXTERNAL_HOSTNAME'):
+    ALLOWED_HOSTS.append(os.environ.get('RENDER_EXTERNAL_HOSTNAME'))
 
-
-
+# Also support manual ALLOWED_HOSTS env variable (comma-separated)
+if os.environ.get('ALLOWED_HOSTS'):
+    ALLOWED_HOSTS.extend(os.environ.get('ALLOWED_HOSTS').split(','))
 
 # Application definition
 
