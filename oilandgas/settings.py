@@ -32,6 +32,8 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    'zuharyanoil.com',
+    'www.zuharyanoil.com',
 ]
 
 # Add Render hostname if it exists
